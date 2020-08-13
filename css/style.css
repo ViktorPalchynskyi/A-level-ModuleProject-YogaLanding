@@ -2,7 +2,7 @@ body {
    min-width: 320px;
 }
 
-.wrapper {
+#wrapper {
    width: 100%;
    min-height: 100vh;
    overflow: hidden;
@@ -30,7 +30,7 @@ body {
    transition: all 0.3s;
 }
 
-.menu>li {
+.menu > li {
    padding: 0px 14.5px;
 }
 
@@ -42,7 +42,7 @@ body {
 }
 
 .menu__link:before {
-   content: '';
+   content: "";
    position: absolute;
    width: 30px;
    height: 1px;
@@ -62,16 +62,29 @@ body {
 }
 
 .promo {
-   background: url('../img/bg/bg-01.jpg') center center/cover no-repeat;
+   background: url("../img/bg/bg-01.jpg") center center/cover no-repeat;
    padding: 100px 0 109px 0;
+   position: relative;
+}
+
+.promo:before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #5363db;
+   opacity: 0.8;
 }
 
 .promo .container {
+   position: relative;
+   z-index: 1000;
    display: flex;
    align-items: center;
    justify-content: center;
 }
-
 
 .form__set {
    background-color: #fff;
@@ -87,7 +100,9 @@ body {
    font-weight: 400;
 }
 
-.form__set>input {
+.form__set > input,
+.form__set select {
+   color: #000;
    margin-top: 17px;
    background-color: #f2f2f2;
    border: none;
@@ -95,8 +110,12 @@ body {
    border-radius: 8px;
    font-size: 14px;
    font-weight: 400;
+   width: 100%;
+   outline: 0;
 }
 
+.form__set select {
+}
 
 .form__submit {
    display: block;
@@ -109,7 +128,6 @@ body {
    color: #ffffff;
    font-size: 16px;
    font-weight: 700;
-
 }
 
 .promo__body {
@@ -131,12 +149,13 @@ body {
    font-weight: 400;
 }
 
-@media (max-width: 1199px) {}
+@media (max-width: 1199px) {
+}
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+}
 
 @media (max-width: 767px) {
-
    .promo {
       padding: 100px 20px 109px;
    }
@@ -149,14 +168,13 @@ body {
       font-size: 22px;
    }
 
-   .form__set>input {
+   .form__set > input {
       margin-top: 15px;
       background-color: #f2f2f2;
       border: none;
       padding: 16px 105px 12px 10px;
       font-size: 12px;
    }
-
 
    .form__submit {
       display: block;
@@ -172,7 +190,6 @@ body {
       color: #ffffff;
       font-size: 16px;
       font-weight: 700;
-
    }
 
    .promo__body {
@@ -224,9 +241,9 @@ body {
       z-index: 2;
    }
 
-   .menu__btn>span,
-   .menu__btn>span::before,
-   .menu__btn>span::after {
+   .menu__btn > span,
+   .menu__btn > span::before,
+   .menu__btn > span::after {
       display: block;
       position: absolute;
       width: 100%;
@@ -235,13 +252,13 @@ body {
       transition: all 0.3s;
    }
 
-   .menu__btn>span::before {
-      content: '';
+   .menu__btn > span::before {
+      content: "";
       top: -10px;
    }
 
-   .menu__btn>span::after {
-      content: '';
+   .menu__btn > span::after {
+      content: "";
       top: 10px;
    }
 
@@ -261,27 +278,26 @@ body {
       background-color: #fff;
    }
 
-   .menu>li {
+   .menu > li {
       display: block;
       padding: 10px 0px;
-
    }
 
-   #menu__toggle:checked~.menu__btn>span {
+   #menu__toggle:checked ~ .menu__btn > span {
       transform: rotate(45deg);
    }
 
-   #menu__toggle:checked~.menu__btn>span::before {
+   #menu__toggle:checked ~ .menu__btn > span::before {
       top: 0;
       transform: rotate(0);
    }
 
-   #menu__toggle:checked~.menu__btn>span::after {
+   #menu__toggle:checked ~ .menu__btn > span::after {
       top: 0;
       transform: rotate(90deg);
    }
 
-   #menu__toggle:checked~.menu {
+   #menu__toggle:checked ~ .menu {
       visibility: visible;
       top: 0;
    }
@@ -294,5 +310,4 @@ body {
    .promo {
       margin-top: 92px;
    }
-
 }
