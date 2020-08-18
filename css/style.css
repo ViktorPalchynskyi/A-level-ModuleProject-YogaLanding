@@ -31,11 +31,11 @@ body {
    transition: all 0.3s;
 }
 
-.menu > li {
+.menu>li {
    padding: 0px 14.5px;
 }
 
-.menu > li:last-child {
+.menu>li:last-child {
    padding: 0px;
 }
 
@@ -108,7 +108,7 @@ body {
    font-weight: 400;
 }
 
-.form__set > input,
+.form__set>input,
 .form__set select {
    color: #000;
    margin-top: 17px;
@@ -201,7 +201,7 @@ body {
    margin-bottom: 25px;
 }
 
-.program__item > div {
+.program__item>div {
    width: 50%;
    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -249,10 +249,79 @@ body {
    line-height: 22px;
 }
 
+
+.galery__list {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.galery__list>li {
+   width: 25%;
+}
+
+.galety__link {
+   display: block;
+   width: 100%;
+   padding-top: 73%;
+   position: relative;
+}
+
+.galety__link::before {
+   z-index: 2;
+   content: "\e986";
+   position: absolute;
+   color: #5b6ceb;
+   font-family: "icomoon";
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 18px;
+   width: 43px;
+   height: 42px;
+   box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 50%;
+   opacity: 0;
+   visibility: hidden;
+}
+
+.galety__link::after {
+   z-index: 1;
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: #5b6ceb;
+   opacity: 0;
+   visibility: hidden;
+   transition: 0.3s;
+}
+
+.galety__link:hover:before {
+   visibility: visible;
+
+   opacity: 1;
+}
+
+.galety__link:hover:after {
+   visibility: visible;
+   opacity: 0.8;
+}
+
+
 @media (max-width: 1199px) {
    #header .container {
       padding: 16px 14.5px;
    }
+
    .program__box {
       padding: 0 15.5px;
    }
@@ -307,7 +376,7 @@ body {
       font-size: 22px;
    }
 
-   .form__set > input,
+   .form__set>input,
    .form__set select {
       padding: 16px 70px 12px 10px;
       font-size: 12px;
@@ -367,9 +436,9 @@ body {
       z-index: 2;
    }
 
-   .menu__btn > span,
-   .menu__btn > span::before,
-   .menu__btn > span::after {
+   .menu__btn>span,
+   .menu__btn>span::before,
+   .menu__btn>span::after {
       display: block;
       position: absolute;
       width: 100%;
@@ -378,12 +447,12 @@ body {
       transition: all 0.3s;
    }
 
-   .menu__btn > span::before {
+   .menu__btn>span::before {
       content: "";
       top: -10px;
    }
 
-   .menu__btn > span::after {
+   .menu__btn>span::after {
       content: "";
       top: 10px;
    }
@@ -404,26 +473,26 @@ body {
       background-color: #fff;
    }
 
-   .menu > li {
+   .menu>li {
       display: block;
       padding: 10px 0px;
    }
 
-   #menu__toggle:checked ~ .menu__btn > span {
+   #menu__toggle:checked~.menu__btn>span {
       transform: rotate(45deg);
    }
 
-   #menu__toggle:checked ~ .menu__btn > span::before {
+   #menu__toggle:checked~.menu__btn>span::before {
       top: 0;
       transform: rotate(0);
    }
 
-   #menu__toggle:checked ~ .menu__btn > span::after {
+   #menu__toggle:checked~.menu__btn>span::after {
       top: 0;
       transform: rotate(90deg);
    }
 
-   #menu__toggle:checked ~ .menu {
+   #menu__toggle:checked~.menu {
       visibility: visible;
       top: 0;
    }
@@ -447,7 +516,7 @@ body {
       padding: 20px 30px;
    }
 
-   .form__set > input,
+   .form__set>input,
    .form__set select {
       padding: 26px 0px 22px 10px;
       font-size: 12px;
@@ -479,7 +548,7 @@ body {
    }
 
    .program .container {
-      padding: 60px 0 114px 0;
+      padding: 60px 0 30px 0;
    }
 
    .program__box {
@@ -487,7 +556,7 @@ body {
       margin-top: 31.5px;
    }
 
-   .program__box > li {
+   .program__box>li {
       list-style: none;
       width: 100%;
       padding: 15.5px 15px;
@@ -497,7 +566,7 @@ body {
       flex-direction: column;
    }
 
-   .program__item > div {
+   .program__item>div {
       width: 100%;
    }
 
@@ -511,5 +580,9 @@ body {
       border-bottom-right-radius: 8px;
       border-bottom-left-radius: 8px;
       border-top-right-radius: 0px;
+   }
+
+   .galery__list>li {
+      width: 50%;
    }
 }
