@@ -316,6 +316,75 @@ body {
    opacity: 0.8;
 }
 
+.about {
+   padding: 175px 0px;
+}
+
+.about__box {
+   display: flex;
+   justify-content: space-between;
+}
+
+.about__box>div {
+   width: 50%;
+}
+
+.about__text {
+   margin-top: 30px;
+   color: #555555;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 22px;
+   padding-right: 143px;
+}
+
+.about__photo {
+   position: relative;
+   width: 100%;
+   padding-top: 26%;
+}
+
+.about__photo:before {
+   content: "\ea44";
+   font-family: 'icomoon';
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   left: -25px;
+   width: 50px;
+   height: 50px;
+   cursor: pointer;
+   color: #5b6ceb;
+   font-size: 50px;
+   border-radius: 50%;
+   box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.about__photo:after {
+   content: "\ea42";
+   position: absolute;
+   font-family: 'icomoon';
+   right: -25px;
+   top: 50%;
+   transform: translateY(-50%);
+   width: 50px;
+   height: 50px;
+   cursor: pointer;
+   color: #5b6ceb;
+   font-size: 50px;
+   border-radius: 50%;
+   box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
+   background-color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+}
 
 @media (max-width: 1199px) {
    #header .container {
@@ -324,6 +393,10 @@ body {
 
    .program__box {
       padding: 0 15.5px;
+   }
+
+   .about__box {
+      padding: 0 40.5px 0 15.5px;
    }
 }
 
@@ -378,7 +451,7 @@ body {
 
    .form__set>input,
    .form__set select {
-      padding: 16px 70px 12px 10px;
+      padding: 16px 50px 12px 10px;
       font-size: 12px;
    }
 
@@ -403,6 +476,21 @@ body {
 
    .promo__text {
       font-size: 34px;
+   }
+
+
+   .about__text {
+      margin-top: 30px;
+      color: #555555;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 22px;
+      padding-right: 50px;
+   }
+
+   .about__photo {
+      padding-top: 26%;
+      flex: 1;
    }
 }
 
@@ -584,5 +672,43 @@ body {
 
    .galery__list>li {
       width: 50%;
+   }
+
+   .about__box {
+      flex-direction: column;
+      padding: 0px 15.5px;
+      align-items: center;
+   }
+
+   .about__box>div {
+      width: 100%;
+   }
+
+   .about__box div:last-child {
+      width: 90%;
+   }
+
+   .about__text {
+      padding: 0;
+   }
+
+   .about__photo {
+      margin-top: 15px;
+      padding-top: 47%;
+   }
+
+   .about__photo:before,
+   .about__photo:after {
+      width: 35px;
+      height: 35px;
+      font-size: 35px;
+   }
+
+   .about__photo:before {
+      left: -17.5px;
+   }
+
+   .about__photo:after {
+      right: -17.5px;
    }
 }
