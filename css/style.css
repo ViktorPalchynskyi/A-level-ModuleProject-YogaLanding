@@ -31,11 +31,11 @@ body {
    transition: all 0.3s;
 }
 
-.menu>li {
+.menu > li {
    padding: 0px 14.5px;
 }
 
-.menu>li:last-child {
+.menu > li:last-child {
    padding: 0px;
 }
 
@@ -71,7 +71,6 @@ body {
 
 .promo {
    background: url("../img/bg/bg-01.jpg") center center/cover no-repeat;
-   padding: 100px 0 109px 0;
    position: relative;
 }
 
@@ -87,6 +86,7 @@ body {
 }
 
 .promo .container {
+   padding: 100px 0 109px 0;
    position: relative;
    z-index: 1000;
    display: flex;
@@ -108,7 +108,7 @@ body {
    font-weight: 400;
 }
 
-.form__set>input,
+.form__set > input,
 .form__set select {
    color: #000;
    margin-top: 17px;
@@ -201,7 +201,7 @@ body {
    margin-bottom: 25px;
 }
 
-.program__item>div {
+.program__item > div {
    width: 50%;
    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
 }
@@ -249,7 +249,6 @@ body {
    line-height: 22px;
 }
 
-
 .galery__list {
    list-style: none;
    padding: 0;
@@ -258,7 +257,7 @@ body {
    flex-wrap: wrap;
 }
 
-.galery__list>li {
+.galery__list > li {
    width: 25%;
 }
 
@@ -316,7 +315,7 @@ body {
    opacity: 0.8;
 }
 
-.about {
+.about .container {
    padding: 175px 0px;
 }
 
@@ -325,7 +324,7 @@ body {
    justify-content: space-between;
 }
 
-.about__box>div {
+.about__box > div {
    width: 50%;
 }
 
@@ -346,7 +345,7 @@ body {
 
 .about__photo:before {
    content: "\ea44";
-   font-family: 'icomoon';
+   font-family: "icomoon";
    position: absolute;
    top: 50%;
    transform: translateY(-50%);
@@ -364,11 +363,10 @@ body {
    align-items: center;
 }
 
-
 .about__photo:after {
    content: "\ea42";
    position: absolute;
-   font-family: 'icomoon';
+   font-family: "icomoon";
    right: -25px;
    top: 50%;
    transform: translateY(-50%);
@@ -383,7 +381,77 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+}
 
+.benefits {
+   background: url("../img/bg/bg-02.jpg") center center/cover no-repeat;
+   position: relative;
+}
+
+.benefits:before {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   background-color: #5b6ceb;
+   opacity: 0.8;
+}
+
+.benefits .container {
+   padding: 66px 0 136px 0;
+}
+
+.benefits__box {
+   margin: 0 -17.5px;
+   padding: 0;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.benefits__box > li {
+   list-style: none;
+   width: 25%;
+}
+
+.benefits__item {
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   z-index: 1000;
+   padding: 0 17.5px;
+   margin-top: 59px;
+   text-align: center;
+}
+
+.benefits__icon {
+   margin: 0 auto;
+   width: 70px;
+   height: 70px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 2px solid #fff;
+   border-radius: 50%;
+}
+
+.benefits__title {
+   color: #ffffff;
+   margin: 34px 0 0 0;
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 27px;
+   text-transform: uppercase;
+   flex: 1;
+}
+
+.benefits__text {
+   margin: 25px 0 0 0;
+   color: #ffffff;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 27px;
 }
 
 @media (max-width: 1199px) {
@@ -397,6 +465,10 @@ body {
 
    .about__box {
       padding: 0 40.5px 0 15.5px;
+   }
+
+   .benefits__box {
+      padding: 0 15.5px;
    }
 }
 
@@ -424,10 +496,7 @@ body {
 
    .item__subtitle {
       margin: 14px 0px 0px 0px;
-      color: #999999;
-      font-family: "Open Sans";
       font-size: 14px;
-      font-weight: 400;
       line-height: 22px;
    }
 }
@@ -449,7 +518,7 @@ body {
       font-size: 22px;
    }
 
-   .form__set>input,
+   .form__set > input,
    .form__set select {
       padding: 16px 50px 12px 10px;
       font-size: 12px;
@@ -478,7 +547,6 @@ body {
       font-size: 34px;
    }
 
-
    .about__text {
       margin-top: 30px;
       color: #555555;
@@ -491,6 +559,17 @@ body {
    .about__photo {
       padding-top: 26%;
       flex: 1;
+   }
+
+   .benefits__title {
+      margin: 28px 0 0 0;
+      font-size: 16px;
+   }
+
+   .benefits__text {
+      margin: 22px 0 0 0;
+      font-size: 14px;
+      line-height: 22px;
    }
 }
 
@@ -524,9 +603,9 @@ body {
       z-index: 2;
    }
 
-   .menu__btn>span,
-   .menu__btn>span::before,
-   .menu__btn>span::after {
+   .menu__btn > span,
+   .menu__btn > span::before,
+   .menu__btn > span::after {
       display: block;
       position: absolute;
       width: 100%;
@@ -535,12 +614,12 @@ body {
       transition: all 0.3s;
    }
 
-   .menu__btn>span::before {
+   .menu__btn > span::before {
       content: "";
       top: -10px;
    }
 
-   .menu__btn>span::after {
+   .menu__btn > span::after {
       content: "";
       top: 10px;
    }
@@ -561,26 +640,26 @@ body {
       background-color: #fff;
    }
 
-   .menu>li {
+   .menu > li {
       display: block;
       padding: 10px 0px;
    }
 
-   #menu__toggle:checked~.menu__btn>span {
+   #menu__toggle:checked ~ .menu__btn > span {
       transform: rotate(45deg);
    }
 
-   #menu__toggle:checked~.menu__btn>span::before {
+   #menu__toggle:checked ~ .menu__btn > span::before {
       top: 0;
       transform: rotate(0);
    }
 
-   #menu__toggle:checked~.menu__btn>span::after {
+   #menu__toggle:checked ~ .menu__btn > span::after {
       top: 0;
       transform: rotate(90deg);
    }
 
-   #menu__toggle:checked~.menu {
+   #menu__toggle:checked ~ .menu {
       visibility: visible;
       top: 0;
    }
@@ -604,7 +683,7 @@ body {
       padding: 20px 30px;
    }
 
-   .form__set>input,
+   .form__set > input,
    .form__set select {
       padding: 26px 0px 22px 10px;
       font-size: 12px;
@@ -644,7 +723,7 @@ body {
       margin-top: 31.5px;
    }
 
-   .program__box>li {
+   .program__box > li {
       list-style: none;
       width: 100%;
       padding: 15.5px 15px;
@@ -654,7 +733,7 @@ body {
       flex-direction: column;
    }
 
-   .program__item>div {
+   .program__item > div {
       width: 100%;
    }
 
@@ -670,8 +749,12 @@ body {
       border-top-right-radius: 0px;
    }
 
-   .galery__list>li {
+   .galery__list > li {
       width: 50%;
+   }
+
+   .about .container {
+      padding: 40px 0px;
    }
 
    .about__box {
@@ -680,7 +763,7 @@ body {
       align-items: center;
    }
 
-   .about__box>div {
+   .about__box > div {
       width: 100%;
    }
 
@@ -710,5 +793,13 @@ body {
 
    .about__photo:after {
       right: -17.5px;
+   }
+
+   .benefits__box > li {
+      width: 100%;
+   }
+
+   .benefits .container {
+      padding: 0px 0 50px 0;
    }
 }
