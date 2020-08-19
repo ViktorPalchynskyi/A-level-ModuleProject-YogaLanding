@@ -454,6 +454,34 @@ body {
    line-height: 27px;
 }
 
+.shop {
+   background: url("../img/bg/bg-03.jpg") center center/cover no-repeat;
+}
+
+.shop .container {
+   padding: 99px 0 107px 0;
+}
+
+.shop__box {
+   display: flex;
+   margin: 0 -15px;
+}
+
+.shop__box > li {
+   width: calc(100% / 3);
+   list-style: none;
+   padding: 0 15px;
+}
+
+.shop__item {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+   box-shadow: 6px 6px 50px rgba(0, 0, 0, 0.1);
+   border-radius: 8px;
+   background-color: #fff;
+}
+
 @media (max-width: 1199px) {
    #header .container {
       padding: 16px 14.5px;
