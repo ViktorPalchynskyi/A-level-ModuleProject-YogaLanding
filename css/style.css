@@ -31,11 +31,11 @@ body {
    transition: all 0.3s;
 }
 
-.menu > li {
+.menu>li {
    padding: 0px 14.5px;
 }
 
-.menu > li:last-child {
+.menu>li:last-child {
    padding: 0px;
 }
 
@@ -108,7 +108,7 @@ body {
    font-weight: 400;
 }
 
-.form__set > input,
+.form__set>input,
 .form__set select {
    color: #000;
    margin-top: 17px;
@@ -192,33 +192,34 @@ body {
    margin-top: 61.5px;
 }
 
-.program__item {
-   list-style: none;
+.program__box>li {
+   display: flex;
    width: 50%;
+   list-style: none;
    padding: 0px 15px;
+}
+
+.program__item {
    display: flex;
    border-radius: 8px;
    margin-bottom: 25px;
+   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
 }
 
-.program__item > div {
+.program__item>div {
    width: 50%;
-   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .item__photo {
    width: 100%;
    padding-top: 56%;
-   border-bottom-left-radius: 8px;
-   border-top-left-radius: 8px;
 }
 
 .item__body {
    padding: 50px 49px 47px 30px;
    display: flex;
    flex-direction: column;
-   border-bottom-right-radius: 8px;
-   border-top-right-radius: 8px;
 }
 
 .item__title {
@@ -257,7 +258,7 @@ body {
    flex-wrap: wrap;
 }
 
-.galery__list > li {
+.galery__list>li {
    width: 25%;
 }
 
@@ -324,7 +325,7 @@ body {
    justify-content: space-between;
 }
 
-.about__box > div {
+.about__box>div {
    width: 50%;
 }
 
@@ -344,7 +345,7 @@ body {
 }
 
 .about__photo:before {
-   content: "\ea44";
+   content: "\e903";
    font-family: "icomoon";
    position: absolute;
    top: 50%;
@@ -354,7 +355,7 @@ body {
    height: 50px;
    cursor: pointer;
    color: #5b6ceb;
-   font-size: 50px;
+   font-size: 25px;
    border-radius: 50%;
    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
    background-color: #fff;
@@ -364,7 +365,7 @@ body {
 }
 
 .about__photo:after {
-   content: "\ea42";
+   content: "\e906";
    position: absolute;
    font-family: "icomoon";
    right: -25px;
@@ -374,7 +375,7 @@ body {
    height: 50px;
    cursor: pointer;
    color: #5b6ceb;
-   font-size: 50px;
+   font-size: 25px;
    border-radius: 50%;
    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
    background-color: #fff;
@@ -410,9 +411,11 @@ body {
    flex-wrap: wrap;
 }
 
-.benefits__box > li {
+.benefits__box>li {
    list-style: none;
    width: 25%;
+   padding: 0 17.5px;
+   display: flex;
 }
 
 .benefits__item {
@@ -420,7 +423,6 @@ body {
    flex-direction: column;
    position: relative;
    z-index: 1000;
-   padding: 0 17.5px;
    margin-top: 59px;
    text-align: center;
 }
@@ -469,7 +471,7 @@ body {
    padding: 0;
 }
 
-.shop__box > li {
+.shop__box>li {
    width: calc(100% / 3);
    list-style: none;
    padding: 0 15px;
@@ -499,6 +501,7 @@ body {
    text-transform: uppercase;
    position: relative;
 }
+
 .shop__price:before {
    content: "$";
    font-size: 32px;
@@ -531,13 +534,13 @@ body {
    flex: 1;
 }
 
-.shop__date > p {
+.shop__date>p {
    margin: 51px 0px 0px 0px;
    position: relative;
 }
 
-.shop__date > p:first-child:before,
-.shop__date > p:nth-child(2):before {
+.shop__date>p:first-child:before,
+.shop__date>p:nth-child(2):before {
    content: "";
    width: 100px;
    position: absolute;
@@ -576,7 +579,8 @@ body {
    display: flex;
    flex-wrap: wrap;
 }
-.footer__content > div {
+
+.footer__content>div {
    width: 50%;
 }
 
@@ -598,6 +602,7 @@ body {
    line-height: 22px;
    padding-right: 140px;
 }
+
 .footer__social {
    margin: 0;
    margin-top: 71px;
@@ -605,7 +610,7 @@ body {
    display: flex;
 }
 
-.footer__social > li {
+.footer__social>li {
    list-style: none;
    font-size: 21px;
 }
@@ -628,7 +633,7 @@ body {
    flex-wrap: wrap;
 }
 
-.footer__list > li {
+.footer__list>li {
    width: 50%;
    list-style: none;
    padding: 0 88px;
@@ -636,10 +641,10 @@ body {
    position: relative;
 }
 
-.footer__list > li:first-child:before,
-.footer__list > li:nth-child(2):before,
-.footer__list > li:nth-child(3):before,
-.footer__list > li:last-child:before {
+.footer__list>li:first-child:before,
+.footer__list>li:nth-child(2):before,
+.footer__list>li:nth-child(3):before,
+.footer__list>li:last-child:before {
    content: "\e948";
    font-family: "icomoon";
    font-size: 21px;
@@ -649,16 +654,18 @@ body {
    position: absolute;
 }
 
-.footer__list > li:nth-child(2):before {
+.footer__list>li:nth-child(2):before {
    content: "\e945";
 }
-.footer__list > li:nth-child(3):before {
+
+.footer__list>li:nth-child(3):before {
    content: "\e942";
 }
 
-.footer__list > li:last-child:before {
+.footer__list>li:last-child:before {
    content: "\eaa7";
 }
+
 .footer__info {
    display: block;
    color: #ffffff;
@@ -758,7 +765,7 @@ body {
       font-size: 22px;
    }
 
-   .form__set > input,
+   .form__set>input,
    .form__set select {
       padding: 16px 50px 12px 10px;
       font-size: 12px;
@@ -816,11 +823,11 @@ body {
       justify-content: center;
    }
 
-   .shop__box > li {
+   .shop__box>li {
       width: 50%;
    }
 
-   .shop__box > li:last-child {
+   .shop__box>li:last-child {
       margin-top: 30px;
    }
 
@@ -833,7 +840,7 @@ body {
       top: 61%;
    }
 
-   .footer__content > div {
+   .footer__content>div {
       width: 100%;
    }
 
@@ -872,9 +879,9 @@ body {
       z-index: 2;
    }
 
-   .menu__btn > span,
-   .menu__btn > span::before,
-   .menu__btn > span::after {
+   .menu__btn>span,
+   .menu__btn>span::before,
+   .menu__btn>span::after {
       display: block;
       position: absolute;
       width: 100%;
@@ -883,12 +890,12 @@ body {
       transition: all 0.3s;
    }
 
-   .menu__btn > span::before {
+   .menu__btn>span::before {
       content: "";
       top: -10px;
    }
 
-   .menu__btn > span::after {
+   .menu__btn>span::after {
       content: "";
       top: 10px;
    }
@@ -909,26 +916,26 @@ body {
       background-color: #fff;
    }
 
-   .menu > li {
+   .menu>li {
       display: block;
       padding: 10px 0px;
    }
 
-   #menu__toggle:checked ~ .menu__btn > span {
+   #menu__toggle:checked~.menu__btn>span {
       transform: rotate(45deg);
    }
 
-   #menu__toggle:checked ~ .menu__btn > span::before {
+   #menu__toggle:checked~.menu__btn>span::before {
       top: 0;
       transform: rotate(0);
    }
 
-   #menu__toggle:checked ~ .menu__btn > span::after {
+   #menu__toggle:checked~.menu__btn>span::after {
       top: 0;
       transform: rotate(90deg);
    }
 
-   #menu__toggle:checked ~ .menu {
+   #menu__toggle:checked~.menu {
       visibility: visible;
       top: 0;
    }
@@ -952,7 +959,7 @@ body {
       padding: 20px 30px;
    }
 
-   .form__set > input,
+   .form__set>input,
    .form__set select {
       padding: 26px 0px 22px 10px;
       font-size: 12px;
@@ -992,7 +999,7 @@ body {
       margin-top: 31.5px;
    }
 
-   .program__box > li {
+   .program__box>li {
       list-style: none;
       width: 100%;
       padding: 15.5px 15px;
@@ -1002,23 +1009,15 @@ body {
       flex-direction: column;
    }
 
-   .program__item > div {
+   .program__item>div {
       width: 100%;
    }
 
    .item__photo {
-      border-top-right-radius: 8px;
-      border-top-left-radius: 8px;
-      border-bottom-left-radius: 0px;
+      padding-top: 111%;
    }
 
-   .item__body {
-      border-bottom-right-radius: 8px;
-      border-bottom-left-radius: 8px;
-      border-top-right-radius: 0px;
-   }
-
-   .galery__list > li {
+   .galery__list>li {
       width: 50%;
    }
 
@@ -1032,7 +1031,7 @@ body {
       align-items: center;
    }
 
-   .about__box > div {
+   .about__box>div {
       width: 100%;
    }
 
@@ -1064,7 +1063,7 @@ body {
       right: -17.5px;
    }
 
-   .benefits__box > li {
+   .benefits__box>li {
       width: 100%;
    }
 
@@ -1076,12 +1075,12 @@ body {
       padding: 50px 0 70px 0;
    }
 
-   .shop__box > li {
+   .shop__box>li {
       width: 100%;
       margin-top: 20px;
    }
 
-   .shop__box > li:last-child {
+   .shop__box>li:last-child {
       margin-top: 20px;
    }
 
@@ -1097,6 +1096,7 @@ body {
       text-transform: uppercase;
       position: relative;
    }
+
    .shop__price:before {
       font-size: 22px;
       left: 40%;
@@ -1115,13 +1115,13 @@ body {
       flex: 1;
    }
 
-   .shop__date > p {
+   .shop__date>p {
       margin: 51px 0px 0px 0px;
       position: relative;
    }
 
-   .shop__date > p:first-child:before,
-   .shop__date > p:nth-child(2):before {
+   .shop__date>p:first-child:before,
+   .shop__date>p:nth-child(2):before {
       content: "";
       width: 100px;
       position: absolute;
@@ -1163,7 +1163,7 @@ body {
       right: 18%;
    }
 
-   .footer__list > li {
+   .footer__list>li {
       width: 100%;
    }
 }

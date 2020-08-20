@@ -1,12 +1,10 @@
-/* определяет, как высчитвыается общая ширина и высота элемента:
-width и height включают в себя значения border и padding, не но margin */
 @font-face {
    font-family: 'icomoon';
-   src: url('../fonts/icomoon.eot?6jdr41');
-   src: url('../fonts/icomoon.eot?6jdr41#iefix') format('embedded-opentype'),
-      url('../fonts/icomoon.ttf?6jdr41') format('truetype'),
-      url('../fonts/icomoon.woff?6jdr41') format('woff'),
-      url('../fonts/icomoon.svg?6jdr41#icomoon') format('svg');
+   src: url('../fonts/icomoon.eot?6c574d');
+   src: url('../fonts/icomoon.eot?6c574d#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?6c574d') format('truetype'),
+      url('../fonts/icomoon.woff?6c574d') format('woff'),
+      url('../fonts/icomoon.svg?6c574d#icomoon') format('svg');
    font-weight: normal;
    font-style: normal;
    font-display: block;
@@ -16,7 +14,7 @@ width и height включают в себя значения border и padding,
 [class*=" icon-"] {
    /* use !important to prevent issues with browser extensions that change fonts */
    font-family: 'icomoon' !important;
-   speak: none;
+   speak: never;
    font-style: normal;
    font-weight: normal;
    font-variant: normal;
@@ -26,6 +24,14 @@ width и height включают в себя значения border и padding,
    /* Better Font Rendering =========== */
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-right:before {
+   content: "\e906";
+}
+
+.icon-chevron-left:before {
+   content: "\e903";
 }
 
 .icon-linkedin:before {
@@ -56,22 +62,6 @@ width и height включают в себя значения border и padding,
    content: "\e986";
 }
 
-.icon-circle-up:before {
-   content: "\ea41";
-}
-
-.icon-circle-right:before {
-   content: "\ea42";
-}
-
-.icon-circle-down:before {
-   content: "\ea43";
-}
-
-.icon-circle-left:before {
-   content: "\ea44";
-}
-
 .icon-google-plus3:before {
    content: "\ea8d";
 }
@@ -83,6 +73,7 @@ width и height включают в себя значения border и padding,
 .icon-pinterest:before {
    content: "\ead1";
 }
+
 
 *,
 *:after,
