@@ -201,6 +201,7 @@ body {
 
 .program__item {
    display: flex;
+   align-items: center;
    border-radius: 8px;
    margin-bottom: 25px;
    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.1);
@@ -213,16 +214,18 @@ body {
 
 .item__photo {
    width: 100%;
+   height: 100%;
    padding-top: 56%;
 }
 
 .item__body {
-   padding: 50px 49px 47px 30px;
+   padding: 20px 49px 20px 30px;
    display: flex;
    flex-direction: column;
 }
 
 .item__title {
+   text-decoration: none;
    color: #777777;
    font-size: 20px;
    font-weight: 700;
@@ -230,6 +233,11 @@ body {
    text-transform: uppercase;
    line-height: 20px;
    margin: 0;
+}
+
+
+.item__title:hover {
+   text-decoration: underline;
 }
 
 .item__text {
@@ -242,12 +250,18 @@ body {
 }
 
 .item__subtitle {
+   text-decoration: none;
    margin-top: 18px;
    color: #999999;
    font-family: "Open Sans";
    font-size: 14px;
    font-weight: 400;
    line-height: 22px;
+}
+
+
+.item__subtitle:hover {
+   text-decoration: underline;
 }
 
 .galery__list {
@@ -341,12 +355,11 @@ body {
 .about__photo {
    position: relative;
    width: 100%;
-   padding-top: 26%;
+   padding-top: 7%;
 }
 
-.about__photo:before {
-   content: "\e903";
-   font-family: "icomoon";
+.about_next {
+   z-index: 1000;
    position: absolute;
    top: 50%;
    transform: translateY(-50%);
@@ -356,6 +369,7 @@ body {
    cursor: pointer;
    color: #5b6ceb;
    font-size: 25px;
+   border: none;
    border-radius: 50%;
    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
    background-color: #fff;
@@ -364,10 +378,9 @@ body {
    align-items: center;
 }
 
-.about__photo:after {
-   content: "\e906";
+.about_prev {
+   z-index: 1000;
    position: absolute;
-   font-family: "icomoon";
    right: -25px;
    top: 50%;
    transform: translateY(-50%);
@@ -376,6 +389,7 @@ body {
    cursor: pointer;
    color: #5b6ceb;
    font-size: 25px;
+   border: none;
    border-radius: 50%;
    box-shadow: 6px 6px 9px rgba(0, 0, 0, 0.1);
    background-color: #fff;
@@ -721,7 +735,7 @@ body {
    }
 
    .item__body {
-      padding: 30px 39px 27px 20px;
+      padding: 15px 39px 15px 20px;
    }
 
    .item__title {
@@ -794,6 +808,26 @@ body {
       font-size: 34px;
    }
 
+   .program__item {
+      flex-direction: column;
+   }
+
+   .program__item>div {
+      width: 100%;
+   }
+
+   .item__photo {
+      padding-top: 106%;
+   }
+
+   .about__box {
+      flex-direction: column;
+   }
+
+   .about__box>div {
+      width: 100%;
+   }
+
    .about__text {
       margin-top: 30px;
       color: #555555;
@@ -804,8 +838,7 @@ body {
    }
 
    .about__photo {
-      padding-top: 26%;
-      flex: 1;
+      margin-top: 20px;
    }
 
    .benefits__title {
@@ -1005,10 +1038,6 @@ body {
       padding: 15.5px 15px;
    }
 
-   .program__item {
-      flex-direction: column;
-   }
-
    .program__item>div {
       width: 100%;
    }
@@ -1045,7 +1074,6 @@ body {
 
    .about__photo {
       margin-top: 15px;
-      padding-top: 47%;
    }
 
    .about__photo:before,
